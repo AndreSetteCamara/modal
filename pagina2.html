@@ -11,18 +11,18 @@
 </head>
 <body>
 <div>
-<form action="index.html" id="formCadastro">
+<form action="index.html" id="formCadastro" oninput="carregando()">
     <label for="">Nome</label>
-    <input type="text" name="" id="" disabled>
+    <input type="nome" name="" placeholder="Nome" id="nome" oninput=nome() maxlength="29" disabled>
     <label for="">Email</label>
-    <input type="text" name="" id="" disabled>
+    <input type="email" name="" placeholder="seuemail@exemplo.com" id="email" oninput=email() maxlength="29" disabled>
     <label for="">Telefone</label>
-    <input type="text" name="" id="" disabled>
+    <input type="tel" placeholder="(31)99999-9999" id="telefone" oninput=mascara_telefone() maxlength="14" disabled>
     <label for="">CPF</label>
-    <input type="text" name="" id="" disabled>
+    <input type="cpf" name="" id="cpf" placeholder="123.456.789-00" oninput=mascara_cpf() maxlength="14" disabled>
     <label for="">Senha</label>
-    <input type="text" name="" id="" disabled>
-    <button id="Fechar" class="margin5" onclick="window.location.href = 'index.html';">Voltar</button>
+    <input type="senha" name="" placeholder="*******" id="senha" oninput=senha() maxlength="29" disabled>
+    <button id="Fechar" class="margin5" onclick="voltar()">Voltar</button>
 </form>
 </div>
 <script src="script.js"></script>

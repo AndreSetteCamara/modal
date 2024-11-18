@@ -17,15 +17,15 @@
 <dialog id="modal">
 <form action="index.html" id="formCadastro">
     <label for="">Nome</label>
-    <input type="text" name="" placeholder="Nome" id="nome" maxlength="29">
+    <input type="nome" name="" placeholder="Nome" id="nome" oninput=mascara_nome() maxlength="29">
     <label for="">Email</label>
-    <input type="text" name="" placeholder="seuemail@exemplo.com" id="email" maxlength="29">
+    <input type="email" name="" placeholder="seuemail@exemplo.com" id="email" oninput=mascara_email() maxlength="29">
     <label for="">Telefone</label>
     <input type="tel" placeholder="(31)99999-9999" id="telefone" oninput=mascara_telefone() maxlength="14">
     <label for="">CPF</label>
-    <input type="text" name="" id="cpf" placeholder="123.456.789-00" oninput=mascara_cpf() maxlength="14">
+    <input type="cpf" name="" id="cpf" placeholder="123.456.789-00" oninput=mascara_cpf() maxlength="14">
     <label for="">Senha</label>
-    <input type="text" name="" placeholder="*******" id="senha" maxlength="29">
+    <input type="senha" name="" placeholder="*******" id="senha" oninput=mascara_senha() maxlength="29">
     <input type="submit" form="modal" id="Enviar" onclick="enviar()"></input>
 </form>
 <button id="Fechar" onclick="closeModal()">Fechar</button>

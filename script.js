@@ -14,14 +14,22 @@ function enviar(){
     window.location.href = 'pagina2.html';
 }
 
+function voltar(){
+    window.location.href = 'index.html';
+    localStorage.clear()
+}
+
+function mascara_nome(){
+    var nome = document.getElementById("nome").value
+    localStorage.setItem("nome", nome)
+}
+
+function mascara_email(){
+    var email = document.getElementById("email").value
+    localStorage.setItem("email", email)
+}
 
 function mascara_telefone() {
-    //limitador
-    var tel = document.getElementById("telefone").value
-    document.getElementById("telefone").value = tel
-    tel = document.getElementById("telefone").value.slice(0, 10)
-
-
     //máscara
     var tel_formatado = document.getElementById("telefone").value
     if (tel_formatado[0] != "(") {
@@ -41,14 +49,12 @@ function mascara_telefone() {
             document.getElementById("telefone").value = tel_formatado.slice(0, 9) + "-" + tel_formatado[9]
         }
     }
+    
+
+    localStorage.setItem("telefone",tel_formatado)
 }
 
 function mascara_cpf() {
-    //12 primeiros caracteres
-    var cpf = document.getElementById("cpf").value;
-    document.getElementById("cpf").value = cpf;
-    cpf = document.getElementById("cpf").value.slice(0, 12);
-
     //Máscara
     var cpf_formatado = document.getElementById("cpf").value;
 
@@ -72,6 +78,34 @@ function mascara_cpf() {
             document.getElementById("cpf").value = cpf_formatado.slice(0, 11) + "-" + cpf_formatado.slice(11);
         }
     }
+    localStorage.setItem("cpf",cpf_formatado)
 }
+
+function mascara_senha(){
+    var senha = document.getElementById("senha").value
+    localStorage.setItem("senha", senha)
+}
+
+
+window.onload = function carregando() {
+
+if (localStorage.getItem("nome")) {
+    document.getElementById("nome").value = localStorage.getItem("nome");
+  }
+  if (localStorage.getItem("email")) {
+    document.getElementById("email").value = localStorage.getItem("email");
+  }
+  if (localStorage.getItem("telefone")) {
+    document.getElementById("telefone").value = localStorage.getItem("telefone");
+  }
+  if (localStorage.getItem("cpf")) {
+    document.getElementById("cpf").value = localStorage.getItem("cpf");
+  }
+  if (localStorage.getItem("senha")) {
+    document.getElementById("senha").value = localStorage.getItem("senha");
+  }
+};
+
+
 
 
