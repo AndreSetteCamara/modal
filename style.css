@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    background-color: #7f8fa6;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+header{
+    background-color: #718093;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+}
+
+#Login{
+    border-radius: 9px;
+    width: 7%;
+    height: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: "Sour Gummy", sans-serif;
+    cursor: pointer;
+}
+
+#modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #b9c2ce;
+    border: black solid 1px;
+    width: 20%;
+    padding-top: 1%;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    border: none;
+    padding-left: 20%;
+
+    
+}
+
+#Enviar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+    border-radius: 9px;
+    height: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: "Sour Gummy", sans-serif;
+    cursor: pointer;
+    margin-left: 15%;
+}
+
+#Fechar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 30%;
+align-items: center;
+border-radius: 9px;
+height: 3vh;
+margin-bottom: 2vh;
+font-family: "Sour Gummy", sans-serif;
+cursor: pointer;
+margin-left: 35%;
+}
+
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #b9c2ce;
+    width: 20%;
+}
+
+.margin5{
+    margin: 5%;
+}
+
+
